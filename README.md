@@ -21,7 +21,7 @@ access-2019-12.log
 use Castlegate\LogRotate;
 
 // Create a log rotator
-$rotator = new LogRotator('/path/to/logs');
+$rotator = new LogRotate('/path/to/logs');
 
 // Set file extension and retention months
 $rotator->setExtensions('log');
