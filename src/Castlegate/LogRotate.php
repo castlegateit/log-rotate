@@ -115,7 +115,7 @@ class LogRotate
         $logs = $this->findLogs();
 
         if (count($logs) == 0) {
-            error_log(__CLASS__.': No logs were found matching the regex or extension. Regex: "'.$this->regex.'" Extensions: .'.implode(', .', $this->extensions));
+            error_log(__CLASS__.': No logs were found matching the regex or extension. Regex: "'.$this->getFinalRegex().'" Extensions: .'.implode(', .', $this->extensions));
         }
 
         // Loop through results.
@@ -170,7 +170,7 @@ class LogRotate
             $extensions = '{'.implode(',', $this->extensions).'}';
         }
 
-        return glob($this->log_path.'/*.'.$extensions);
+        return glob($this->log_path.'/*.'.$extensions, GLOB_BRACE);
     }
 
     /**
