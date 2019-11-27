@@ -224,7 +224,7 @@ class LogRotate
 
         $message.= 'Retention set to '.$this->retention.' month(s). ';
 
-        if (unlink($file_path)) {
+        if ($this->dry_run || unlink($file_path)) {
             error_log($message.'Deleted '.basename($file_path).' ('.$file_path.')');
             return true;
         } else {
