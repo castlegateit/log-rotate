@@ -2,7 +2,7 @@
 
 namespace Castlegate;
 
-class LogRotator
+class LogRotate
 {
     /**
      * Path to log files.
