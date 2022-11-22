@@ -48,3 +48,8 @@ Multiple file extensions can be added.
 ```php
 $rotator->setExtensions(['log', 'txt']);
 ```
+
+
+## License
+
+Released under the [MIT License](https://opensource.org/licenses/MIT). See [LICENSE](LICENSE) for details.
